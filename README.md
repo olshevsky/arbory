@@ -1,5 +1,6 @@
-# Installation
+# Laravel 10 app with setup Arbory CMS (https://github.com/arbory/arbory)
 
+# Installation
 
 0. Clone repo and cd to project dir:
     - git clone https://github.com/olshevsky/arbory.git
