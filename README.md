@@ -12,23 +12,25 @@
    - docker run --rm -u "$(id -u):$(id -g)" -v "$(pwd):/var/www/html" -w /var/www/html laravelsail/php82-composer:latest composer install --ignore-platform-reqs
     
 2. Make sure that ./storage folder has write permissions
+   
+4. Rename .env.example to .env and configure if necessary
 
-3. Run:
+5. Run:
     - ./vendor/bin/sail up -d
    
-4. Run:
+6. Run:
     - docker ps
     - Copy sail-8.2/app {CONTAINER ID}
 
-5. Login into app container: 
+7. Login into app container: 
     - docker exec -it {CONTAINER ID} /bin/sh
 
-6. Install dependencies, build assets, create storage symlink and run migrations:
+8. Install dependencies, build assets, create storage symlink and run migrations:
     - composer install
     - php artisan migrate
     - php artisan db:seed
     - php artisan arbory:install
 
 
-7. Urls:
+9. Urls:
    - App: http://localhost/admin
